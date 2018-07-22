@@ -2,18 +2,28 @@ import React from 'react';
 
 import BooksSearch from './BooksSearch';
 import BooksList from './BooksList';
-// import * as BooksAPI from './BooksAPI'
+import * as BooksAPI from './BooksAPI' // * - import all
 import './App.css'
 
 class BooksApp extends React.Component {
   state = {
-    showSearchPage: false
+    books: []
+  }
+
+  componentDidMount() {
+    BooksAPI.getAll().then((books) => {
+      this.setState({ books })
+    })
+
   }
 
   render() {
+    console.log(this.state.books)
     return (
       <div className="app">
-        <BooksList />
+        <BooksList
+        books={this.state.books}
+        />
       </div>
     )
   }
