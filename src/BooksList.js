@@ -23,7 +23,7 @@ class BooksList extends Component {
                         <Book
                           book={book}
                           moveBook={this.props.moveBook}
-                          defaultShelf="currentlyReading"
+                          shelfName="currentlyReading"
                         />
                       </li>
                     ))
@@ -43,7 +43,7 @@ class BooksList extends Component {
                         <Book
                           book={book}
                           moveBook={this.props.moveBook}
-                          defaultShelf="wantToRead"
+                          shelfName="wantToRead"
                         />
                       </li>
                     ))
@@ -63,7 +63,7 @@ class BooksList extends Component {
                         <Book
                           book={book}
                           moveBook={this.props.moveBook}
-                          defaultShelf="read"
+                          shelfName="read"
                         />
                       </li>
                     ))
