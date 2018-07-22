@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Book from './Book';
+
 class BooksList extends Component {
   render () {
     return (
@@ -14,9 +16,7 @@ class BooksList extends Component {
               <div className="bookshelf-books">
                 <ol className="books-grid">
                   <li>
-
-
-
+                    <Book />
                   </li>
                 </ol>
               </div>
@@ -26,8 +26,7 @@ class BooksList extends Component {
               <div className="bookshelf-books">
                 <ol className="books-grid">
                   <li>
-
-
+                    <Book />
                   </li>
                 </ol>
               </div>
@@ -37,8 +36,7 @@ class BooksList extends Component {
               <div className="bookshelf-books">
                 <ol className="books-grid">
                   <li>
-              
-
+                    <Book />
                   </li>
                 </ol>
               </div>
