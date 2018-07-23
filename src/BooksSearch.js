@@ -54,6 +54,7 @@ class BooksSearch extends Component {
                   <li key={searchResult.id}>
                     <Book
                       book={searchResult}
+                      moveBook={this.props.moveBook}
                     />
                   </li>
                 ))
