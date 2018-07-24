@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Book from './Book';
 
-class BooksList extends Component {
+class BooksLibrary extends Component {
   render () {
     return (
       <div className="list-books">
@@ -83,4 +83,4 @@ class BooksList extends Component {
   }
 }
 
-export default BooksList;
+export default BooksLibrary;
