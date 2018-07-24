@@ -53,14 +53,24 @@ class BooksSearch extends Component {
           <div className="search-books-results">
             <ol className="books-grid">
               {
-                this.state.searchResult.map(searchResult => (
-                  <li key={searchResult.id}>
-                    <Book
-                      book={searchResult}
-                      moveBook={this.props.moveBook}
-                    />
-                  </li>
-                ))
+                this.state.searchResult.map(searchResult => {
+                  let shelf = "none"
+
+                  this.props.books.map(book => (
+                    book.id === searchResult.id ?
+                    shelf = book.shelf :
+                    ''
+                  ))
+                  return (
+                    <li key={searchResult.id}>
+                      <Book
+                        book={searchResult}
+                        moveBook={this.props.moveBook}
+                        shelfName={shelf}
+                      />
+                    </li>
+                  )
+                })
               }
             </ol>
 
