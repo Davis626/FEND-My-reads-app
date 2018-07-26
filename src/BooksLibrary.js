@@ -14,7 +14,7 @@ class BooksLibrary extends Component {
         </div>
         <div className="list-books-content">
           <div>
-            // "Currently reading" shelf
+            {/* "Currently reading" shelf */}
             <BooksShelf
               books = { books }
               moveBook = { moveBook }
@@ -23,7 +23,7 @@ class BooksLibrary extends Component {
             />
           </div>
           <div>
-            // "Want to read" shelf
+            {/* "Want to read" shelf */}
             <BooksShelf
               books = { books }
               moveBook = { moveBook }
@@ -32,7 +32,7 @@ class BooksLibrary extends Component {
             />
           </div>
           <div>
-            // "Read" shelf
+            {/* "Read" shelf */}
             <BooksShelf
               books = { books }
               moveBook = { moveBook }
