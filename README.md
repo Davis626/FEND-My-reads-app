@@ -4,29 +4,33 @@
 
 ## Table of Contents
 * [Project Overview](#project-overview)
+* [Starter code](#starter-code)
+* [Backend Server](#backend-server)
+* [Important](#important)
+* [React Components Structure](#react-components-structure)
 * [Dependencies](#dependencies)
 * [Instructions](#instructions)
-* [Instructions](#instructions)
+* [About the project](#about-the-project)
 
 ## Project Overview
 MyReads app - project of the Udacity Front-End Web Developer Nanodegree Program.
 Purpose of the project was to convert a static webpage from the starter code to an interactive webpage using React.
 
-### Starter code
+## Starter code
 Starter code provided by Udacity:
 > link https://github.com/udacity/reactnd-project-myreads-starter
 
-### Backend Server
+## Backend Server
 
 To simplify development process, there is provided a backend server for students to develop against. The provided file [`BooksAPI.js`](src/utils/BooksAPI.js) contains the methods that will be needed to perform necessary operations on the backend like:
 * [`getAll`](#getall)
 * [`update`](#update)
 * [`search`](#search)
 
-### Important
+## Important
 The **backend API** uses a fixed set of cached search results and is limited to a particular set of search terms, which can be found in [SEARCH_TERMS.md](SEARCH_TERMS.md). That list of terms are the _only_ terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results.
 
-### React Components Structure
+## React Components Structure
 ```
 <App />
 
