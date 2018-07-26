@@ -1,21 +1,29 @@
 import React, { Component } from 'react';
 
+// Book component uses the state passed from parent components to hold the information for each book
+
 class Book extends Component {
   render () {
-    let bookThumbnail = this.props.book.imageLinks ?
-    this.props.book.imageLinks.thumbnail :
+    const { books, moveBook, shelfName, name, book } = this.props
+
+    // Check if the book has a cover:
+    // If it does - display the cover, otherwise - display empty string
+    let bookCover = book.imageLinks ?
+    book.imageLinks.thumbnail :
     '';
 
+    // Return the information about the current book - book cover, title, author and the correct shelfName
+    // onChange method changes the value of the shelf, when book is moved from current shelf
     return (
       <div className="book">
         <div className="book-top">
-          <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url("${bookThumbnail}")` }}></div>
+          <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url("${bookCover}")` }}></div>
           <div className="book-shelf-changer">
             <select
-              onChange={(event) => this.props.moveBook(
-                this.props.book, event.target.value
+              onChange={(event) => moveBook(
+                book, event.target.value
               )}
-              value={this.props.shelfName}
+              value={shelfName}
             >
               <option value="move" disabled>Move to...</option>
               <option value="currentlyReading">Currently Reading</option>
@@ -25,8 +33,8 @@ class Book extends Component {
             </select>
           </div>
         </div>
-        <div className="book-title">{this.props.book.title}</div>
-        <div className="book-authors">{this.props.book.authors}</div>
+        <div className="book-title">{book.title}</div>
+        <div className="book-authors">{book.authors}</div>
       </div>
     );
   }
