@@ -68,3 +68,5 @@ Main page displays a list of book shelves:
 * Read
 
 Use the search page for searching books and adding them to one of these shelves.
+Afterwards go back to main page to easily move the book from one shelf to another.
+You can also remove a book from the library by selecting "none" shelf.
