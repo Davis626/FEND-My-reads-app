@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Book from './Book';
 
+// BooksShelf component uses the state from the BooksLibrary to display the books with matching shelf name
+
 class BooksShelf extends Component {
   render () {
     const { books, moveBook, shelfName, name } = this.props
