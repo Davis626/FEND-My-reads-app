@@ -4,13 +4,11 @@ import React, { Component } from 'react';
 
 class Book extends Component {
   render () {
-    const { books, moveBook, shelfName, name, book } = this.props
+    const { moveBook, shelfName, book } = this.props
 
     // Check if the book has a cover:
     // If it does - display the cover, otherwise - display empty string
-    let bookCover = book.imageLinks ?
-    book.imageLinks.thumbnail :
-    '';
+    let bookCover = book.imageLinks ? book.imageLinks.thumbnail : '';
 
     // Return the information about the current book - book cover, title, author and the correct shelfName
     // onChange method changes the value of the shelf, when book is moved from current shelf

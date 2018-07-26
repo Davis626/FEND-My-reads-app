@@ -10,9 +10,7 @@ class BooksSearch extends Component {
   }
 
   updateQuery = (query) => {
-    this.setState({
-      query: query
-    })
+    this.setState({ query: query})
     this.updateSearch(query);
   }
 
@@ -30,6 +28,8 @@ class BooksSearch extends Component {
     }
   }
   render () {
+      const { books, moveBook } = this.props
+      const { query} = this.state
       return (
         <div className="search-books">
           <div className="search-books-bar">
@@ -43,7 +43,7 @@ class BooksSearch extends Component {
               <input
                   type="text"
                   placeholder="Search by title or author"
-                  value={this.state.query}
+                  value={query}
                   onChange={(event) => this.updateQuery(event.target.value)}
                 />
             </div>
@@ -54,26 +54,24 @@ class BooksSearch extends Component {
             <ol className="books-grid">
               {
                 this.state.searchResult.map(searchResult => {
-                  let shelf = "none"
+                  let defaultShelf = "none"
 
-                  this.props.books.map(book => (
-                    book.id === searchResult.id ?
-                    shelf = book.shelf :
-                    ''
+                  books.map(book => (
+                    book.id === searchResult.id ? defaultShelf = book.defaultShelf : ''
                   ))
+
                   return (
                     <li key={searchResult.id}>
                       <Book
                         book={searchResult}
-                        moveBook={this.props.moveBook}
-                        shelfName={shelf}
+                        moveBook={moveBook}
+                        shelfName={defaultShelf}
                       />
                     </li>
                   )
                 })
               }
             </ol>
-
           </div>
         </div>
       );
