@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import BooksShelf from './BooksShelf';
+import { Link } from 'react-router-dom'; // Add routing
+import BooksShelf from './BooksShelf'; // Add component path
 
 // BooksLibrary component features 3 book shelves; state is passed from parent to children components
 

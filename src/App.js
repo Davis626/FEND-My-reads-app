@@ -1,7 +1,7 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
-import BooksSearch from './BooksSearch';
-import BooksLibrary from './BooksLibrary';
+import { Route } from 'react-router-dom'; // Add routing
+import BooksSearch from './BooksSearch'; // Add component path
+import BooksLibrary from './BooksLibrary'; // Add component path
 import * as BooksAPI from './BooksAPI'; // * - import all
 import './App.css'
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Book from './Book';
+import Book from './Book'; //Add component path
 
 // BooksShelf component uses the state from the BooksLibrary to display the books with matching shelf name
 

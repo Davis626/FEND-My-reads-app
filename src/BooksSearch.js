@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; // Add routing
 import * as BooksAPI from './BooksAPI'; // * - import all
-import Book from './Book';
+import Book from './Book'; // Add component path
 
 class BooksSearch extends Component {
   state = {
@@ -34,10 +34,7 @@ class BooksSearch extends Component {
         <div className="search-books">
           <div className="search-books-bar">
 
-            <Link
-              className="close-search"
-              to="/"
-            >Close</Link>
+            <Link className="close-search" to="/" >Close</Link>
 
             <div className="search-books-input-wrapper">
               <input
