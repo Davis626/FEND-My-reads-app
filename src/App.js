@@ -6,24 +6,30 @@ import * as BooksAPI from './BooksAPI'; // * - import all
 import './App.css'
 
 class BooksApp extends React.Component {
+  // Create state for books - array
   state = {
     books: []
   }
 
-  componentDidMount() {
+  // Function fetches books from BooksAPI and updates the state of books
+  fetchBooks = () => {
     BooksAPI.getAll().then((books) => {
       this.setState({ books: books })
     })
   }
 
+  // After component renders, call "componentDidMount" method & fetch the books
+  componentDidMount() {
+    this.fetchBooks();
+  }
+
+  // Function updates the state, when a book is moved from a shelf
   moveBook = (book, shelf) => {
     BooksAPI.update (book, shelf);
-
-    BooksAPI.getAll().then((books) => {
-      this.setState({ books: books })
-    })
+    this.fetchBooks();
   }
 
+  // Render and routing for "BooksLibrary" and "BooksSearch" components
   render() {
     return (
       <div className="app">
