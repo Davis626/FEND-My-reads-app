@@ -12,8 +12,10 @@ class BooksShelf extends Component {
               {books.filter(book =>  book.shelf === shelfName ).map(book => (
                   <li key={book.id}>
                     <Book
+                      books = {books}
                       book={book}
                       moveBook={moveBook}
+                      shelfName={shelfName}
                     />
                   </li>
                 ))

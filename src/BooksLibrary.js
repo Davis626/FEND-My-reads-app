@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import BooksShelf from './BooksShelf';
 
+// BooksLibrary component features 3 book shelves; state is passed from parent to children components
 
 class BooksLibrary extends Component {
   render () {
@@ -13,6 +14,7 @@ class BooksLibrary extends Component {
         </div>
         <div className="list-books-content">
           <div>
+            // "Currently reading" shelf
             <BooksShelf
               books = { books }
               moveBook = { moveBook }
@@ -21,6 +23,7 @@ class BooksLibrary extends Component {
             />
           </div>
           <div>
+            // "Want to read" shelf
             <BooksShelf
               books = { books }
               moveBook = { moveBook }
@@ -29,6 +32,7 @@ class BooksLibrary extends Component {
             />
           </div>
           <div>
+            // "Read" shelf
             <BooksShelf
               books = { books }
               moveBook = { moveBook }
