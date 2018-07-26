@@ -18,9 +18,7 @@ class Book extends Component {
           <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url("${bookCover}")` }}></div>
           <div className="book-shelf-changer">
             <select
-              onChange={(event) => moveBook(
-                book, event.target.value
-              )}
+              onChange={(event) => moveBook(book, event.target.value)}
               value={shelfName}
             >
               <option value="move" disabled>Move to...</option>
